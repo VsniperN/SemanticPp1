@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+  <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XsStalker2.xsd">
+    
+    
+    <title language="uk" genre="postapocalyptic">S.T.A.L.K.E.R. 2: Серце Чорнобиля</title>
+    
+    
+    <description>
+        Це постапокаліптична гра з відкритим світом, дія якої розгортається в зоні відчуження Чорнобиля.
+     Гра включає багатокористувацький режим.</description>
+    
+    
+    <sections>
+      
+        
+      <section name="Історія" type="background">
+        
+            
+        <content>Гра є продовженням оригінальної серії S.T.A.L.K.E.R.</content>
+        
+        
+      </section>
+      
+        
+      <section name="Розробка" type="production">
+        
+            
+        <details year="2021" lead="GSC Game World">
+                Гру анонсовано в 2021 році, розробляється студією GSC Game World.
+            </details>
+        
+        
+      </section>
+      
+        
+      <section name="Геймплей" type="mechanics">
+        
+            
+        <content>Гравець досліджує відкритий світ, виконуючи квести та борючись із мутантами.</content>
+        
+        
+      </section>
+      
+    
+    </sections>
+    
+    
+    <platforms>
+      
+        
+      <platform release="global">PC</platform>
+      
+        
+      <platform release="global">Xbox Series X</platform>
+      
+    
+    </platforms>
+    
+    
+    <release year="2024" month="December" day="12" platform="PC and Xbox"/>
+    
+    
+    <characters>
+      
+        
+      <character role="protagonist">Майор Олексій</character>
+      
+        
+      <character role="antagonist">Сталкер Мутант</character>
+      
+        
+      <character role="ally">Доктор</character>
+      
+    
+      <character role="neutral">Торгівець</character>
+    </characters>
+    
+    
+    <locations>
+      
+        
+      <location name="Прип'ять" type="місто" danger="середня"/>
+      
+        
+      <location name="ЧАЕС" type="станція" danger="максимальна"/>
+      
+        
+      <location name="Рудий ліс" type="ліс" danger="висока"/>
+      
+    
+    </locations>
+    
+    
+    <artifacts>
+      
+        
+      <artifact name="Вогняний шар" rarity="висока"/>
+      
+        
+      <artifact name="Кристал" rarity="середня"/>
+      
+    
+      <artifact name="Золотий компас" rarity="дуже висока">
+        <details discovered="2023">Знайдений у Рудому лісі.</details>
+      </artifact>
+    </artifacts>
+    
+
+  </game>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="game">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="language" type="xs:string" use="required"/>
+                                <xs:attribute name="genre" type="xs:string"/>
+                                <xs:attribute name="status" type="xs:string"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="description" type="xs:string"/>
+                <xs:element name="sections">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="section" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="content" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="details" minOccurs="0">
+                                            <xs:complexType mixed="true"> <!-- Дозволяє текстовий вміст -->
+                                                <xs:attribute name="year" type="xs:positiveInteger" use="required"/>
+                                                <xs:attribute name="lead" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="type" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="platforms">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="platform" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="release" type="xs:string"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="release">
+                    <xs:complexType>
+                        <xs:attribute name="year" type="xs:positiveInteger" use="required"/>
+                        <xs:attribute name="month" type="xs:string"/>
+                        <xs:attribute name="day" type="xs:positiveInteger"/>
+                        <xs:attribute name="platform" type="xs:string"/> <!-- Додано platform -->
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="characters">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="character" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="role" type="xs:string"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="locations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="location" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="type" type="xs:string"/>
+                                    <xs:attribute name="danger" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="artifacts">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="artifact" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="details" minOccurs="0">
+                                            <xs:complexType mixed="true"> <!-- Дозволяє текстовий вміст -->
+                                                <xs:attribute name="discovered" type="xs:positiveInteger"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="rarity" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
